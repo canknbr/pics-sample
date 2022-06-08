@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import SearchForm from './components/SearchForm';
 import Image from './components/Image';
 const App = () => {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('cat');
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,14 +24,16 @@ const App = () => {
     setQuery(val);
   };
   if (isLoading) {
-    return <h1>Loading...</h1>;
+    return <h1 className='center'>Loading...</h1>;
   }
   return (
-    <div>
+    <div className="container">
       <SearchForm onSearchSubmit={onSearchSubmit} />
-      {images.map(image => {
-        return <Image key={image.id} {...image} />;
-      })}
+      <div className="image-container">
+        {images.map(image => {
+          return <Image key={image.id} {...image} />;
+        })}
+      </div>
     </div>
   );
 };

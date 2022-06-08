@@ -1,13 +1,82 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
+  color: #495057;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(210, 233, 238, 1);
+  background: -moz-linear-gradient(
+    -45deg,
+    rgb(152, 179, 185) 2%,
+    rgba(180, 215, 225, 1) 36%,
+    rgba(176, 213, 223, 1) 40%,
+    rgba(133, 188, 204, 1) 89%
+  );
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+.search-section {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.search-section label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+.search-section input {
+  width: 30%;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.1s ease-in-out, box-shadow 0.3s ease-in;
+}
+.search-section input:focus {
+  border-color: rgb(72, 168, 168);
+  box-shadow: 0 4px 14px rgba(133, 188, 204, 0.5);
+}
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+.imgs {
+  width: 250px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+.image-container img {
+  width: 100%;
+
+  border-radius: 12px;
+
+  grid-row-end: span 2;
+  transition: all 0.3s ease-in-out;
+}
+.imgs:hover img {
+  transform: scale(1.2);
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  letter-spacing: -1px;
 }

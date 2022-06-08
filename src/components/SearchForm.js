@@ -10,7 +10,7 @@ const SearchForm = ({ onSearchSubmit }) => {
     onSearchSubmit(query);
   };
   return (
-    <div>
+    <div className="search-section">
       <form onSubmit={handleSubmit}>
         <label>Image Search</label>
         <input
