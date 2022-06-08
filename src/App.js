@@ -24,7 +24,7 @@ const App = () => {
     setQuery(val);
   };
   if (isLoading) {
-    return <h1 className='center'>Loading...</h1>;
+    return <h1 className="center">Loading...</h1>;
   }
   return (
     <div className="container">
