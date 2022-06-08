@@ -4,6 +4,6 @@
 
 ---
 
-<!-- [Pics-sample-link](https://dark-mode-sample.vercel.app/) -->
+[Pics-sample-link](https://pics-sample.vercel.app/)
 
 ![alt text](img/search.png)
